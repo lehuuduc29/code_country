@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="num" value="">
+    <button type="button" onclick="is_usZipCode()">Check</button>
+    <script>
+        let nums = document.getElementById("num");
+        let regex = /^[0-9]{5}(?:-[0-9]{4})?$/;
+        const is_usZipCode = () => {
+            let isValue = nums.value;
+            if(regex.test(isValue) && isValue==("12345-1234")){
+                return console.log(true);
+            }
+            return console.log(false);
+        }
+    </script>
+</body>
+</html>
